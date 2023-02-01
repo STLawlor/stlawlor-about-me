@@ -1,0 +1,148 @@
+@font-face {
+    font-family: allegro;
+    src: url(Assets/Fonts/allegro/AllegroFree.otf);
+}
+
+@font-face {
+    font-family: karu;
+    src: url(Assets/Fonts/karu/Karu-Light.otf);
+}
+
+* {
+    font-family: karu;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    color: #170e3a;
+    background-image: linear-gradient(to bottom right, #7057F7, #ac9efd);
+    height: 100vh;
+    width: 100vw;
+    min-height: 800px;
+    min-width: 360px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+}
+
+#profilePic {
+    border: 1px solid #170e3a;
+    border-radius: 50%;
+    height: 45%;
+    box-shadow: 10px 10px 20px #462dd3;
+    margin: 1em;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-family: allegro;
+    color: #CEFCFB;
+    margin: 0.5 0;
+}
+
+header h3 {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+#emailInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1em;
+}
+
+#emailIcon {
+    height: 1.7em;
+    margin-right: 0.2em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.link-container {
+    position: relative;
+    text-align: center;
+}
+
+.link-container img {
+    border: 2px solid #cbc4f7;
+    background-color: #170e3a;
+    border-radius: 50%;
+    height: 10vh;
+    box-shadow: 1px 1px 5px #462dd3;
+}
+
+.link-container a {
+    color: #cbc4f7;
+    font-size: 0.9em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    background-image: none;
+    width: 100%;
+}
+
+
+#footerLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#footerLinks a {
+    color: #170e3a;
+}
+
+nav a, .nav-icon, #footerLinks a {
+    transition: 0.3s;
+}
+
+nav a:hover ~ .nav-icon {
+    background-color: #170e3a;
+    box-shadow: 1px 1px 10px #462dd3;
+}
+
+nav a:hover, #footerLinks a:hover {
+    color: #6c609b;
+}
+
+@media (min-width: 880px) {
+    body {
+        font-size: large;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .link-container {
+        margin: 0 5vw;
+    }
+
+    #footerLinks {
+        max-width: 60%;
+        margin: 0 20%;
+    }
+}
